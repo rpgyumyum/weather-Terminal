@@ -5,19 +5,11 @@
     "line3": "  / | \\   "
   },
 
-
-
-
-
   "Partly cloudy": {
     "line1": "  \\ /(  ) ",
     "line2": " - O(    )",
     "line3": "  / (  )  "
   },
-
-
-
-
 
   "Cloudy": {
     "line1": "  ( )()_  ",
@@ -25,165 +17,29 @@
     "line3": "  (  )()  "
   },
 
-
-
-
-  "Overcast": {
-    "line1": "  ( )()_  ",
-    "line2": " (      ) ",
-    "line3": "  (  )()  "
-  },
-
-
-
-
-
   "Clear": {
     "line1": "   .   *  ",
     "line2": " *    . O ",
     "line3": " . . *  . "
   },
 
-
-
-
-
-  "Patchy rain possible": {
+  "Drizzle": {
     "line1": " '  '    '",
     "line2": "  '   ' ' ",
     "line3": "'    '   '"
   },
-  "Patchy light drizzle": {
-    "line1": " '  '    '",
-    "line2": "  '   ' ' ",
-    "line3": "'    '   '"
-  },
-  "Light drizzle": {
-    "line1": " '  '    '",
-    "line2": "  '   ' ' ",
-    "line3": "'    '   '"
-  },
-
-
-
-
 
   "rain": {
     "line1": " ' '' ' ' ",
     "line2": " '' ' ' ' ",
     "line3": " ' ' '' ' "
   },
-  "Patchy light rain": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Light rain": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Moderate rain at times": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Moderate rain": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Heavy rain at times": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Heavy rain": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Light freezing rain": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Moderate or heavy freezing rain": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Ice pellets": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Light rain shower": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Moderate or heavy rain shower": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Torrential rain shower": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Moderate or heavy showers of ice pellets": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
-  "Light showers of ice pellets": {
-    "line1": " ' '' ' ' ",
-    "line2": " '' ' ' ' ",
-    "line3": " ' ' '' ' "
-  },
 
-
-
-
-
-
-
-
-
-  "Thundery outbreaks possible": {
+  "Thunder": {
     "line1": " ''_/ _/' ",
     "line2": " ' / _/' '",
     "line3": " /_/'' '' "
   },
-  "Blizzard": {
-    "line1": " ''_/ _/' ",
-    "line2": " ' / _/' '",
-    "line3": " /_/'' '' "
-  },
-  "Patchy light rain with thunder": {
-    "line1": " ''_/ _/' ",
-    "line2": " ' / _/' '",
-    "line3": " /_/'' '' "
-  },
-  "Moderate or heavy rain with thunder": {
-    "line1": " ''_/ _/' ",
-    "line2": " ' / _/' '",
-    "line3": " /_/'' '' "
-  },
-  "Patchy light snow with thunder": {
-    "line1": " ''_/ _/' ",
-    "line2": " ' / _/' '",
-    "line3": " /_/'' '' "
-  },
-  "Moderate or heavy snow with thunder": {
-    "line1": " ''_/ _/' ",
-    "line2": " ' / _/' '",
-    "line3": " /_/'' '' "
-  },
-
-
 
   "chaos": {
     "line1": " c__ ''' '",
@@ -191,123 +47,17 @@
     "line3": " c__ ' 'c_"
   },
 
-
-
-
-
-  "Patchy snow possible": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Freezing drizzle": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Patchy sleet possible": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Heavy freezing drizzle": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Blowing snow": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Patchy freezing drizzle possible": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Light sleet": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Moderate or heavy sleet": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Patchy light snow": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Light snow": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Patchy moderate snow": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Moderate snow": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Patchy heavy snow": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Heavy snow": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Light sleet showers": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Moderate or heavy sleet showers": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Light snow showers": {
-    "line1": " * '* ' * ",
-    "line2": " '* ' * ' ",
-    "line3": " *' * ' * "
-  },
-  "Moderate or heavy snow showers": {
+  "Snow": {
     "line1": " * '* ' * ",
     "line2": " '* ' * ' ",
     "line3": " *' * ' * "
   },
 
-
-
-
-  "Mist": {
-    "line1": " -- _ --  ",
-    "line2": " -__-- -  ",
-    "line3": " - _--__  "
-  },
   "Fog": {
     "line1": " -- _ --  ",
     "line2": " -__-- -  ",
     "line3": " - _--__  "
   },
-  "Freezing fog": {
-    "line1": " -- _ --  ",
-    "line2": " -__-- -  ",
-    "line3": " - _--__  "
-  },
-
-
-
-
 
   "wind": {
     "line1": " c__ -- _ ",

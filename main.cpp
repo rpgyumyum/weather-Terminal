@@ -14,6 +14,66 @@ size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* res
     return totalSize;
 }
 
+std::string getCurrentCondition(std::string currentCondition)
+{
+	if (currentCondition == "Sunny")
+	{
+		return "Sunny";
+	}
+	else if(currentCondition == "Partly cloudy")
+	{
+		return "Partly cloudy";
+	}
+	else if(currentCondition == "Cloudy" || currentCondition == "Overcast")
+	{
+		return "Cloudy";
+	}
+	else if (currentCondition == "Clear")
+	{
+		return "Clear";
+	}
+	else if (currentCondition == "Patchy rain possible" || currentCondition == "Patchy light drizzle" || currentCondition == "Light drizzle" || 
+		currentCondition == "Patch light rain" || currentCondition == "Light rain")
+	{
+		return "Drizzle";
+	}
+	else if (currentCondition == "rain" || currentCondition == "Moderate rain at times" || currentCondition == "Moderate rain" || 
+		currentCondition == "Heavy rain at times" || currentCondition == "Heavy rain" || currentCondition == "Light freezing rain " ||
+		currentCondition == "Moderate or heavy freezing rain" || currentCondition == "Ice pellets" || currentCondition == "Light rain shower" ||
+		currentCondition == "Moderate or heavy rain shower" || currentCondition == "Torrential rain shower" || currentCondition == "Moderate or heavy showers of ice pellets" ||
+		currentCondition == "Light showers of ice pellets")
+	{
+		return "rain";
+	}
+	else if (currentCondition == "Thundery outbreaks possible" || currentCondition == "Blizzard" || currentCondition == "Patchy light rain with thunder" ||
+		currentCondition == "Moderate or heavy rain with thunder" || currentCondition == "Patchy light snow with thunder")
+	{
+		return "Thunder";
+	}
+	else if (currentCondition == "chaos")
+	{
+		return "chaos";
+	}
+	else if (currentCondition == "Patchy snow possible" || currentCondition == "Freezing drizzle" || currentCondition == "Patchy sleet possible" ||
+		currentCondition == "Heavy freezing drizzle" || currentCondition == "Blowing snow" || currentCondition == "Patchy freezing drizzle possible" ||
+		currentCondition == "Light sleet" || currentCondition == "Moderate or heavy sleet" || currentCondition == "Patch light snow" || 
+		currentCondition == "Light snow" || currentCondition == "Patchy Moderate snow" || currentCondition == "Moderate snow" || 
+		currentCondition == "Patchy heavy snow" || currentCondition == "Heavy snow" || currentCondition == "Light sleet showers" || 
+		currentCondition == "Moderate or heavy sleet showers" || currentCondition == "Light snow showers" || currentCondition == "Moderate or heavy snow showers") 
+	{
+		return "Snow";
+	}
+	else if (currentCondition == "Mist" || currentCondition == "Fog" || currentCondition == "Freezing Fog")
+	{
+		return "Fog";
+	}
+	else if (currentCondition == "Wind")
+	{
+		return "wind";
+	}
+	else return "Sunny";
+}
+
 int main(int argc, char const *argv[])
 {
 	
@@ -79,10 +139,10 @@ int main(int argc, char const *argv[])
 	std::cout << '\n';
 
 	//write the first line
-	std::cout << std::left << std::setw(20) << asciiArt[currentCondition]["line1"].asString() << 
+	std::cout << std::left << std::setw(20) << asciiArt[getCurrentCondition(currentCondition)]["line1"].asString() << 
 		std::left << std::setw(36) <<  temperature << "feels like "<< feelTemperature << '\n';
 	//write the second line
-	std::cout << std::left << std::setw(20) << asciiArt[currentCondition]["line2"].asString() << 
+	std::cout << std::left << std::setw(20) << asciiArt[getCurrentCondition(currentCondition)]["line2"].asString() << 
 		std::left << std::setw(35) << currentCondition;
 
 	//check if u should wear sunscreen off of uv-index
