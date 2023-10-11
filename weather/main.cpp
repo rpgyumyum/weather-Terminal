@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <json/json.h>
+#include <jsoncpp/json/json.h>
 #include <curl/curl.h>
 #include <cstdio>
+#include <iomanip>
 
 
 //Callbackfunction to receive response data
@@ -73,7 +74,7 @@ std::string getCurrentCondition(std::string currentCondition)
 	else return "Sunny";
 }
 
-int main(int argc, char const *argv[])
+int main(void)
 {
 	
 	CURL* curl;
@@ -99,7 +100,7 @@ int main(int argc, char const *argv[])
 		res = curl_easy_perform(curl);
 
 		//save the json file
-		std::ofstream file("/home/Lukas/Projects/weather-api/RawWeather.json");
+		std::ofstream file("/tmp/RawWeather.json");
 		file << response;
 		file.close();
 
@@ -108,8 +109,8 @@ int main(int argc, char const *argv[])
 	curl_global_cleanup();
 
 	//reopen file
-	std::ifstream file("/home/Lukas/Projects/weather-api/RawWeather.json");
-	std::ifstream asciiArtRawFile("/home/Lukas/Projects/weather-api/asciiart.json");
+	std::ifstream file("/tmp/RawWeather.json");
+	std::ifstream asciiArtRawFile("./weather/asciiart.json");
 
 	//place the file contents imt the json value "root"
 	Json::Value root;
