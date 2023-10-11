@@ -1,18 +1,3 @@
-/*needed: add stuff, read stuff, remove stuff, modify stuff
-  input parameters:
-
-  todo --> display list
-  todo -add "do smth"
-  todo -done 1
-  todo -mod 1 "do smth and do smth different"
-
-  we read and write everything from "todo.txt"
-
-  the commmand should be able to be excuted from the windows terminal
-  optional: make compatible for arch linux
-
-*/
-
 #include <iostream>
 #include <fstream>
 

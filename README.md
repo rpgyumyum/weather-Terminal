@@ -1,23 +1,35 @@
-# ToDo-Terminal
-A todo command line application that lets u view, add and modify tasks
-##Usage:
+# Terminal Applications
 
-```console
-$ todo
-```
-Displays ur todo list
+- This is a collection of small cli programms with different utilites. 
+- None of the Applications are complex nor are they bug free.
 
-```console
-$ todo -add "some random task"
-```
-Adds a task to your list, not that if you use spaces your string needs to be placed into quotation marks
 
-```console
-$ todo -done 1
-```
-Removes a list item by passing in the corresponding number 
+## List of Applications
+- **todo**
+    - A simple cli todo list
+    - Usage: 
+    ```bash
+    todo --> display list
+    todo -add "do smth"
+    todo -done 1
+    todo -mod 1 "do smth and do smth different"
+    ```
+  - we read and write everything from "~/Documents/todo.txt"(just edit the sourcecode if you want to safe it somewhere else)
 
-```console
-$ todo -mod 1 "modified this task"
-```
-Modifies a list item by passing in the indey and the string u want to replace the task with, again if u use spaces in quotation marks.
+- **weather**
+    - Display weather information with ASCII art gathered from an API 
+    - Usage:
+    ```bash
+    weather
+    ```
+    - Dependencies:
+        - curl
+        - jsoncpp
+
+## Installation
+
+Compile The projects with make by doing ```make``` + ```<proect name>```.  
+Dependencies should be listed above in the list of applications or the compiler is just gonna scream at you.   
+
+After compiling just add the binary to $PATH
+
