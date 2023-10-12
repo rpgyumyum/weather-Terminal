@@ -5,6 +5,7 @@
 #include <curl/curl.h>
 #include <cstdio>
 #include <iomanip>
+#include <unordered_map>
 
 
 //Callbackfunction to receive response data
@@ -14,65 +15,70 @@ size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* res
     return totalSize;
 }
 
-std::string getCurrentCondition(std::string currentCondition)
-{
-	if (currentCondition == "Sunny")
-	{
-		return "Sunny";
-	}
-	else if(currentCondition == "Partly cloudy")
-	{
-		return "Partly cloudy";
-	}
-	else if(currentCondition == "Cloudy" || currentCondition == "Overcast")
-	{
-		return "Cloudy";
-	}
-	else if (currentCondition == "Clear")
-	{
-		return "Clear";
-	}
-	else if (currentCondition == "Patchy rain possible" || currentCondition == "Patchy light drizzle" || currentCondition == "Light drizzle" || 
-		currentCondition == "Patch light rain" || currentCondition == "Light rain")
-	{
-		return "Drizzle";
-	}
-	else if (currentCondition == "rain" || currentCondition == "Moderate rain at times" || currentCondition == "Moderate rain" || 
-		currentCondition == "Heavy rain at times" || currentCondition == "Heavy rain" || currentCondition == "Light freezing rain " ||
-		currentCondition == "Moderate or heavy freezing rain" || currentCondition == "Ice pellets" || currentCondition == "Light rain shower" ||
-		currentCondition == "Moderate or heavy rain shower" || currentCondition == "Torrential rain shower" || currentCondition == "Moderate or heavy showers of ice pellets" ||
-		currentCondition == "Light showers of ice pellets")
-	{
-		return "rain";
-	}
-	else if (currentCondition == "Thundery outbreaks possible" || currentCondition == "Blizzard" || currentCondition == "Patchy light rain with thunder" ||
-		currentCondition == "Moderate or heavy rain with thunder" || currentCondition == "Patchy light snow with thunder")
-	{
-		return "Thunder";
-	}
-	else if (currentCondition == "chaos")
-	{
-		return "chaos";
-	}
-	else if (currentCondition == "Patchy snow possible" || currentCondition == "Freezing drizzle" || currentCondition == "Patchy sleet possible" ||
-		currentCondition == "Heavy freezing drizzle" || currentCondition == "Blowing snow" || currentCondition == "Patchy freezing drizzle possible" ||
-		currentCondition == "Light sleet" || currentCondition == "Moderate or heavy sleet" || currentCondition == "Patch light snow" || 
-		currentCondition == "Light snow" || currentCondition == "Patchy Moderate snow" || currentCondition == "Moderate snow" || 
-		currentCondition == "Patchy heavy snow" || currentCondition == "Heavy snow" || currentCondition == "Light sleet showers" || 
-		currentCondition == "Moderate or heavy sleet showers" || currentCondition == "Light snow showers" || currentCondition == "Moderate or heavy snow showers") 
-	{
-		return "Snow";
-	}
-	else if (currentCondition == "Mist" || currentCondition == "Fog" || currentCondition == "Freezing Fog")
-	{
-		return "Fog";
-	}
-	else if (currentCondition == "Wind")
-	{
-		return "wind";
-	}
-	else return "Sunny";
+
+std::string getCurrentCondition(const std::string& currentCondition) {
+    static const std::unordered_map<std::string, std::string> conditionMap = {
+        { "Sunny", "Sunny" },
+        { "Partly cloudy", "Partly cloudy" },
+        { "Cloudy", "Cloudy" },
+        { "Overcast", "Cloudy" },
+        { "Clear", "Clear" },
+        { "Patchy rain possible", "Drizzle" },
+        { "Patchy light drizzle", "Drizzle" },
+        { "Light drizzle", "Drizzle" },
+        { "Patch light rain", "Drizzle" },
+        { "Light rain", "Drizzle" },
+        { "rain", "rain" },
+        { "Moderate rain at times", "rain" },
+        { "Moderate rain", "rain" },
+        { "Heavy rain at times", "rain" },
+        { "Heavy rain", "rain" },
+        { "Light freezing rain", "rain" },
+        { "Moderate or heavy freezing rain", "rain" },
+        { "Ice pellets", "rain" },
+        { "Light rain shower", "rain" },
+        { "Moderate or heavy rain shower", "rain" },
+        { "Torrential rain shower", "rain" },
+        { "Moderate or heavy showers of ice pellets", "rain" },
+        { "Light showers of ice pellets", "rain" },
+        { "Thundery outbreaks possible", "Thunder" },
+        { "Blizzard", "Thunder" },
+        { "Patchy light rain with thunder", "Thunder" },
+        { "Moderate or heavy rain with thunder", "Thunder" },
+        { "Patchy light snow with thunder", "Thunder" },
+        { "chaos", "chaos" },
+        { "Patchy snow possible", "Snow" },
+        { "Freezing drizzle", "Snow" },
+        { "Patchy sleet possible", "Snow" },
+        { "Heavy freezing drizzle", "Snow" },
+        { "Blowing snow", "Snow" },
+        { "Patchy freezing drizzle possible", "Snow" },
+        { "Light sleet", "Snow" },
+        { "Moderate or heavy sleet", "Snow" },
+        { "Patch light snow", "Snow" },
+        { "Light snow", "Snow" },
+        { "Patchy Moderate snow", "Snow" },
+        { "Moderate snow", "Snow" },
+        { "Patchy heavy snow", "Snow" },
+        { "Heavy snow", "Snow" },
+        { "Light sleet showers", "Snow" },
+        { "Moderate or heavy sleet showers", "Snow" },
+        { "Light snow showers", "Snow" },
+        { "Moderate or heavy snow showers", "Snow" },
+        { "Mist", "Fog" },
+        { "Fog", "Fog" },
+        { "Freezing Fog", "Fog" },
+        { "Wind", "wind" }
+    };
+
+    auto it = conditionMap.find(currentCondition);
+    if (it != conditionMap.end()) {
+        return it->second;
+    } else {
+        return "Sunny"; // Default condition if not found
+    }
 }
+
 
 int main(void)
 {
