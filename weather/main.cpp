@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <jsoncpp/json/json.h>
+#include <json/json.h>
 #include <curl/curl.h>
 #include <cstdio>
 #include <iomanip>
